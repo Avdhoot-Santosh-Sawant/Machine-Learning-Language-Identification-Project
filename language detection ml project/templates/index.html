@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Language Identifier</title>
+    <link rel="stylesheet" href="./static/style.css" />
+  </head>
+  <body>
+    <span
+      ><img
+        alt="."
+        src="../static/info-icon1.png"
+        width="40px"
+        id="l-icon"
+        title="information"
+      />
+      <div id="lang-list">
+        <h2>Language Model Train On :-</h2>
+        <ul>
+          <li>English</li>
+          <li>French</li>
+          <li>Portugeese</li>
+          <li>Russian</li>
+          <li>Malayalam</li>
+          <li>Italian</li>
+          <li>Hindi</li>
+          <li>Tamil</li>
+          <li>Danish</li>
+          <li>Spanish</li>
+          <li>Dutch</li>
+          <li>Greek</li>
+          <li>Sweedish</li>
+          <li>Arabic</li>
+          <li>German</li>
+          <li>Turkish</li>
+          <li>Kannada</li>
+        </ul>
+      </div></span
+    >
+
+    <div id="input-form">
+      <div id="con">
+        <h1 id="h1-title">language identifier</h1>
+        <div id="form-con">
+          <form action="{{ url_for('predict')}}" method="post">
+            <input
+              type="text"
+              name="text"
+              placeholder="TEXT"
+              required="required"
+              id="in"
+              value="{{text}}"
+            />
+
+            <br />
+            <button type="submit" class="btn">Predict</button>
+          </form>
+        </div>
+
+        <div id="output">{{ predicted_language }}</div>
+      </div>
+    </div>
+
+    <script text="javascript/babel">
+      let icon = document.getElementById("l-icon");
+      let langList = document.getElementById("lang-list");
+      let open = false;
+      icon.onclick = function () {
+        if (!open) {
+          langList.style.display = "inline-block";
+          open = true;
+        } else {
+          langList.style.display = "none";
+          open = false;
+        }
+      };
+
+      let inp = document.getElementById("in");
+      let output = document.getElementById("output");
+      inp.onfocus = function () {
+        output.style.visibility = "hidden";
+      };
+
+      output.onclick = () => {
+        output.style.visibility = "visible";
+      };
+    </script>
+  </body>
+</html>

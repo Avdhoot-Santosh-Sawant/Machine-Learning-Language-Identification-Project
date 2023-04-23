@@ -1,0 +1,121 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+#l-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+#lang-list {
+  border: 1px solid green;
+  position: fixed;
+  right: 70px;
+  top: 30px;
+  max-width: 400px;
+  display: none;
+  padding: 10px 20px;
+  z-index: 10;
+
+  backdrop-filter: blur(20px) saturate(159%);
+  -webkit-backdrop-filter: blur(20px) saturate(159%);
+  background-color: rgba(202, 93, 232, 0.67);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+#lang-list ul {
+  text-align: center;
+  margin-top: 10px;
+  list-style-type: none;
+  font-weight: 700;
+}
+
+#lang-list::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: -10px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid green;
+}
+
+#input-form {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  overflow-x: hidden;
+}
+
+body {
+  background-image: url("https://img.freepik.com/premium-vector/gradient-glassmorphism-background_23-2149437416.jpg?w=740");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#con {
+  padding: 30px 20px;
+  border: 1px solid green;
+
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+
+  box-shadow: 1px 1px 8px 0px black;
+}
+
+#h1-title {
+  text-align: center;
+  text-transform: capitalize;
+  color: rgb(63, 189, 211);
+}
+
+#form-con {
+  padding: 40px;
+  display: inline-block;
+  margin: 30px 20px;
+  margin-bottom: 5px;
+  /* border: 1px solid orange; */
+}
+
+#in {
+  padding: 5px 10px;
+  font-weight: 600;
+  font-size: medium;
+}
+
+.btn {
+  width: 70%;
+  padding: 5px 20px;
+  background-color: rgb(63, 189, 211);
+  color: white;
+  font-weight: 800;
+  border: 1px solid green;
+  margin: 20px 15%;
+  font-size: medium;
+  border-radius: 10px;
+}
+
+#output {
+  border-left: 10px solid rgb(142, 17, 226);
+  padding: 10px 20px;
+  color: rgb(2, 30, 122);
+  text-align: center;
+  background-color: rgb(165, 131, 245);
+  visibility: visible;
+  font-weight: 800;
+  font-size: larger;
+}
